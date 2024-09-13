@@ -1,0 +1,27 @@
+import random
+import statistics
+
+class Sensors: #Class of sensor is used to simulate sensor data from the rpi
+  def __init__(self, Sensor_Name, Temp=None, Humidity=None, Pressure=None):
+
+    print("Sensor_Name: ", Sensor_Name)
+
+    if Temp is None: 
+      Temp = random.uniform(60, 80)
+      print("Tempurate: ", Temp) 
+
+    if Humidity is None: 
+      Humidity = random.uniform(40, 50)
+      print("Humidity: ", Humidity)
+
+    if Pressure is None: 
+      Pressure = random.uniform(10, 15)
+      print("Pressure: ", Pressure)
+
+    self.Sensor_Name = Sensor_Name
+    self.Temp = Temp
+    self.Humidity = Humidity
+    self.Pressure = Pressure
+
+
+SensorA = Sensors(SensorA)
